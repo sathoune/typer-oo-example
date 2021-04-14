@@ -7,15 +7,23 @@ class BaseModule(abc.ABC):
 
     def __init__(self):
         self.app = typer.Typer()
-        # self.app.command()(self.hello)
-        # self.app.command()(self.goodbye)
 
         self.register_command(self.hello)
         self.register_command(self.goodbye)
 
+        # The commented lines below do the same as above.
+        # self.app.command()(self.hello)
+        # self.app.command()(self.goodbye)
+
     @staticmethod
     @abc.abstractmethod
     def hello(ctx: typer.Context, name: str):
+        """
+        Here we are using typer context:
+
+        https://typer.tiangolo.com/tutorial/commands/context/
+
+        """
         pass
 
     @staticmethod
@@ -26,5 +34,5 @@ class BaseModule(abc.ABC):
     def register_command(self, func):
         self.app.command()(func)
 
-    def __call__(self):
+    def run(self):
         self.app()
