@@ -51,6 +51,10 @@ https://github.com/tiangolo/typer/issues/261#issuecomment-819174185
 
 * Usage of `self` attribute to expose some data.
 
+## click_to_many_typers
+
+* registering two typers.
+
 ## typer_example
 
 * Modified code from original question to the state the user goes through designed path.
