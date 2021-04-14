@@ -14,4 +14,4 @@ class YourModule(BaseModule):
         typer.echo(f'See you later, {name}')
 
 
-YourModule().run()
+app = YourModule()

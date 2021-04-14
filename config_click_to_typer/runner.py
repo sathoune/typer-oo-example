@@ -42,4 +42,4 @@ class YourModule(BaseModule):
             typer.echo('Please stop this capitalism thing...')
 
 
-YourModule(False).run()
+app = YourModule(False)

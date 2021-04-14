@@ -28,4 +28,4 @@ my_typers = [
     ("classic", YourModule()),
 ]
 
-PapaTyper(my_typers).run()
+app = PapaTyper(my_typers)
