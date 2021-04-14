@@ -1,6 +1,6 @@
 import typer
 
-from click_to_typer.base_module import BaseModule
+from hacky_click_to_typer.base_module import BaseModule
 
 
 class MyModule(BaseModule):
