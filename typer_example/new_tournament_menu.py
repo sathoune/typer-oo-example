@@ -2,11 +2,11 @@ import typer
 
 
 class NewTournamentMenu:
-    typer_app = typer.Typer()
+    # typer_app = typer.Typer()
 
-    @typer_app.command()
+    # @typer_app.command()
     def __init__(self):
-        self.typer_app()
+        # self.typer_app()
         self.print_menu()
         self.user_selection()
 
