@@ -1,3 +1,3 @@
-from click_example.runner import TestModule
+from click_example.my_module import TestModule
 
 TestModule().run()

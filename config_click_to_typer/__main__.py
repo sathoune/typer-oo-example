@@ -1,3 +1,3 @@
-from config_click_to_typer.runner import app
+from config_click_to_typer.my_module import app
 
 app.run()
