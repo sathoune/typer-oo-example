@@ -1,4 +1,4 @@
-# Typer-oo
+# Typer-oo-example
 
 This is answer to question from [typer issue 261](
 https://github.com/tiangolo/typer/issues/261
@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 # Run.
 
-### Modules including `click`:
+### Modules including `click` in the name:
 
 Given name of the module `something_click_else`:
 
@@ -37,18 +37,19 @@ python -m typer_example
 # Content:
 
 ## click_example
-
+Example from [this post](
+https://github.com/tiangolo/typer/issues/261#issuecomment-819174185
+) with additions to make the script able to execute.
 #### Command
 
 ```shell
 python -m click_example
 ```
 
-Example from [this post](
-https://github.com/tiangolo/typer/issues/261#issuecomment-819174185
-) with additions to make the script able to execute.
-
 ## click_to_typer
+
+* AbstractBaseClass that uses static methods to declare commands.
+* Wrapper around `app.commmand()(lambda x: "my function")`
 
 #### Command
 
@@ -56,12 +57,9 @@ https://github.com/tiangolo/typer/issues/261#issuecomment-819174185
 python -m click_to_typer
 ```
 
-#### Features
-
-* AbstractBaseClass that uses static methods to declare commands.
-* Wrapper around `app.commmand()(lambda x: "my function")`
-
 ## config_click_to_typer
+
+* Usage of `self` attribute to expose some data.
 
 #### Command
 
@@ -69,11 +67,9 @@ python -m click_to_typer
 python -m config_click_to_typer
 ```
 
-#### Features
-
-* Usage of `self` attribute to expose some data.
-
 ## click_to_many_typers
+
+* registering two typers.
 
 #### Command
 
@@ -81,18 +77,11 @@ python -m config_click_to_typer
 python -m click_to_many_typers
 ```
 
-#### Features
-
-* registering two typers.
-
 ## typer_example
 
 #### Command
 
+* Modified code from original question to the state the user goes through designed path.
 ```shell
 python -m typer_example
 ```
-
-#### Features
-
-* Modified code from original question to the state the user goes through designed path.

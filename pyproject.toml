@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "typer-oo"
+name = "typer-oo-example"
 version = "0.1.0"
-description = ""
+description = "This is answer to one of the questions from Typer repository."
 license = "MIT"
 authors = ["Michal Bargiel"]
 
