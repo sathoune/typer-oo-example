@@ -77,11 +77,24 @@ python -m config_click_to_typer
 python -m click_to_many_typers
 ```
 
+## many_typers_extended
+
+* registering two typers.
+* extending `classic` with custom static methods
+* extending `angry` command with usage of `self` and typer `context`
+
+#### Command
+
+```shell
+python -m many_typers_extended
+```
+
 ## typer_example
 
 #### Command
 
 * Modified code from original question to the state the user goes through designed path.
+
 ```shell
 python -m typer_example
 ```
