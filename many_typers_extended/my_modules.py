@@ -9,6 +9,7 @@ class AngryModule(BaseModule):
         self.secret = 14
         self.register_command(self.expose_secret)
         self.register_command(self.expose_context)
+        self.register_command(self.call_everything)
 
     @staticmethod
     def hello(name: str):
@@ -24,6 +25,12 @@ class AngryModule(BaseModule):
     @staticmethod
     def expose_context(ctx: typer.Context):
         typer.echo(f"The command from context is: {ctx.command}")
+
+    def call_everything(self, ctx: typer.Context, name: str):
+        self.hello(name)
+        self.expose_secret()
+        self.expose_context(ctx)
+        self.goodbye(name)
 
 
 class YourModule(BaseModule):
