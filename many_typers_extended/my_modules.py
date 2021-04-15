@@ -7,9 +7,14 @@ class AngryModule(BaseModule):
     def __init__(self):
         super(AngryModule, self).__init__()
         self.secret = 14
-        self.register_command(self.expose_secret)
-        self.register_command(self.expose_context)
-        self.register_command(self.call_everything)
+        self.register_many([
+            self.expose_secret,
+            self.expose_context,
+            self.call_everything,
+        ])
+
+        # add some nesting with `sub` command.
+        self.app.add_typer(YourModule().app, name='sub')
 
     @staticmethod
     def hello(name: str):
@@ -36,8 +41,10 @@ class AngryModule(BaseModule):
 class YourModule(BaseModule):
     def __init__(self):
         super(YourModule, self).__init__()
-        self.register_command(self.custom)
-        self.register_command(self.other_custom)
+        self.register_many([
+            self.custom,
+            self.other_custom,
+        ])
 
     @staticmethod
     def hello(name: str):

@@ -80,8 +80,11 @@ python -m click_to_many_typers
 ## many_typers_extended
 
 * registering two typers.
-* extending `classic` with custom static methods
-* extending `angry` command with usage of `self` and typer `context`
+* extract PapaTyper to avoid import conflicts.
+* extending `classic` with custom static methods.
+* extending `angry` command with usage of `self` and typer `context`.
+* Add subcommand group `sub` for `angry` command.
+* Helper for registering commands.
 
 #### Command
 
