@@ -92,6 +92,41 @@ python -m click_to_many_typers
 python -m many_typers_extended
 ```
 
+## instance_app
+
+* This extends `click_to_many_typers`.
+* Have in mind this example has a bug and does not work correctly.
+* This uses `typer.app` as class variable. It is created when class is declared.
+  Creating `self. app` in `__init__` creates `app` for each instance of the class in the opposition
+  to this example, where `app` is created once for all class instances.
+
+```python
+import typer 
+import abc
+
+class BaseModule(abc.ABC):
+    app = typer.Typer()
+
+```
+
+The behaviour is incorrect: `angry` commands are overwritten by `classic` command. To check run:
+
+```shell
+python -m instance_app classic hello Mike
+```
+
+```shell
+python -m instance_app angry hello Mike
+```
+
+You can see the message is the same. `YourModule` overwritten behaviour described in `AngryModule`
+
+#### Command
+
+```shell
+python -m instance_app
+```
+
 ## typer_example
 
 #### Command
